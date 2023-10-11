@@ -28,13 +28,18 @@ with Data :
    data
 
 with Ekstraksi :
+   url_tf='https://drive.google.com/file/d/1bmViR9avCJYNdVjgrKCKS7vl2AOu6W8A/view?usp=drive_link'
    url_log_tf='https://drive.google.com/file/d/1-0mBse0FBN9bLUZU8cG4iMpLDW2HolS7/view?usp=sharing'
+   url_oht='https://drive.google.com/file/d/1-4qqy-4kBvZ_k_BBxTetiZrA0Aj8zIyX/view?usp=sharing'
    url_tf_idf='https://drive.google.com/file/d/1-5bke07KeJ3oiF5Mt0jicQVFgVBRSHUq/view?usp=sharing'
-   file_id1=url_tf_idf.split('/')[-2]
+   file_id1=url_tf.split('/')[-2]
    file_id2=url_log_tf.split('/')[-2]
+   file_id3=url_oht.split('/')[-2]
+   file_id4=url_tf_idf.split('/')[-2]
 
    st.subheader('Term Frequency (TF)')
-   tf=pd.read_csv('TF_label.csv')
+   dwn_url1='https://drive.google.com/uc?id=' + file_id1
+   tf = pd.read_csv(dwn_url1)
    tf
    
    st.subheader('Logarithm Frequency (Log-TF)')
@@ -43,12 +48,13 @@ with Ekstraksi :
    log_tf
    
    st.subheader('One Hot Encoder / Binary')
-   oht=pd.read_csv('OneHotEncoder.csv')
+   dwn_url3='https://drive.google.com/uc?id=' + file_id3
+   oht = pd.read_csv(dwn_url3)
    oht
    
    st.subheader('TF-IDF')
-   dwn_url1='https://drive.google.com/uc?id=' + file_id1
-   tf_idf = pd.read_csv(dwn_url1)
+   dwn_url4='https://drive.google.com/uc?id=' + file_id4
+   tf_idf = pd.read_csv(dwn_url4)
    tf_idf
 
 with lda:
