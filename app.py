@@ -28,17 +28,27 @@ with Data :
    data
 
 with Ekstraksi :
+   url_tf='https://drive.google.com/file/d/1bmViR9avCJYNdVjgrKCKS7vl2AOu6W8A/view?usp=sharing'
+   url_tf_idf='https://drive.google.com/file/d/1-5bke07KeJ3oiF5Mt0jicQVFgVBRSHUq/view?usp=sharing'
+   file_id1=url_tf_idf.split('/')[-2]
+   file_id2=url_tf.split('/')[-2]
+
    st.subheader('Term Frequency (TF)')
-   tf=pd.read_csv('TF_label.csv')
+   dwn_url2='https://drive.google.com/uc?id=' + file_id2
+   tf = pd.read_csv(dwn_url2)
    tf
+   
    st.subheader('Logarithm Frequency (Log-TF)')
    log_tf=pd.read_csv('log_TF.csv')
    log_tf
+   
    st.subheader('One Hot Encoder / Binary')
    oht=pd.read_csv('OneHotEncoder.csv')
    oht
+   
    st.subheader('TF-IDF')
-   tf_idf=pd.read_csv('https://drive.google.com/file/d/1-5bke07KeJ3oiF5Mt0jicQVFgVBRSHUq/view?usp=sharing')
+   dwn_url1='https://drive.google.com/uc?id=' + file_id1
+   tf_idf = pd.read_csv(dwn_url1)
    tf_idf
 
 with lda:
