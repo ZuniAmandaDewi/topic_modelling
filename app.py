@@ -37,10 +37,10 @@ with Ekstraksi :
    file_id3=url_oht.split('/')[-2]
    file_id4=url_tf_idf.split('/')[-2]
 
-   st.subheader('Term Frequency (TF)')
-   dwn_url1='https://drive.google.com/uc?id=' + file_id1
-   tf = pd.read_csv(dwn_url1)
-   tf
+   # st.subheader('Term Frequency (TF)')
+   # dwn_url1='https://drive.google.com/uc?id=' + file_id1
+   # tf = pd.read_csv(dwn_url1)
+   # tf
    
    st.subheader('Logarithm Frequency (Log-TF)')
    dwn_url2='https://drive.google.com/uc?id=' + file_id2
